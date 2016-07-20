@@ -72,18 +72,22 @@ int main()
 {
 	List A,B;
 	int Data[10]={25,41,16,98,5,67,9,55,1,121};
- 	A.insertList(0,Data[0]); //建立链表A首结点
+	//建立链表A首结点
+ 	A.insertList(0,Data[0]); 
+ 	//顺序向后插入
  	for(int i=1;i<10;i++)
-  		A.insertList(0,Data[i]); //顺序向后插入
+  		A.insertList(0,Data[i]); 
 	cout<<"\n链表A:";
 	A.printList();
 	A.deleteList(Data[7]);
 	cout<<endl;
 	cout<<"删除A:";
 	A.printList();
-	B.insertList(0,Data[0]); //建立链表B首结点
+	//建立链表B首结点
+	B.insertList(0,Data[0]); 
  	for(int i=0;i<10;i++)
-  		B.insertList(B.getHead()->Data,Data[i]); //在首结点处顺序向后插入
+ 		//在首结点处顺序向后插入
+  		B.insertList(B.getHead()->Data,Data[i]); 
 	cout<<"\n链表B:";
 	B.printList();
 	B.deleteList(67);
