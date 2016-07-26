@@ -54,7 +54,7 @@ int BTree::count(tree *p){
 	if(p==NULL){
 		return 0;
 	}else{
-		return count(p->left)+count(p->right);
+		return count(p->left)+count(p->right)+1;
 	}
 }
 void BTree::preOrder(tree *temp){
@@ -83,13 +83,13 @@ int BTree::findLeaf(tree *temp){
 		return 0;
 	}else{
 		if(temp->left==NULL&&temp->right==NULL){
-			return n+1;
+			return n+=1;
 		}else{
 			findLeaf(temp->left);
 			findLeaf(temp->right);
 		}
+		return n;
 	}
-	return n;
 }
 int BTree::findNode(tree *temp){
 	if(temp==NULL)return 0;
