@@ -45,6 +45,8 @@ int main() {
     c = 1;
     //自动判断类型赋值
     decltype(c) e = a;
+    //数组
+    int arr[5] = {2, 6, 7, 1, 9};
     //标准输出
     cout << "请输入您的名字:" << endl;
     //标准输入
@@ -67,6 +69,11 @@ int main() {
     a = (b = 3, b + 2);
     cout << "a =" << a << endl;
     //循环 if 跳过
+    cout << "for循环" << endl;
+    for (int i = 0; i < 5; ++i) {
+        cout << arr[i];
+    }
+    cout << endl;
     return 0;
 }
 
