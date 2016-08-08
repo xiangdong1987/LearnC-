@@ -3,11 +3,14 @@
 //
 #include "MyHeader.h"
 
+//定义类型的的两种方式
+typedef char C;
+using I=int;
 //定义数据结构
 struct person {
-    char name[10];
-    int height;
-    int weight;
+    C name[10];
+    I height;
+    I weight;
 };
 
 //计算标准体重
